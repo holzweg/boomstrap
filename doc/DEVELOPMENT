@@ -1,0 +1,15 @@
+Some quickstart guides for development:
+
+* Create only the files you need to override from the base layout, do not copy over files
+  which don't need changes (upgrade path and compatibilty)
+
+* Do not edit the original bootstrap files, but override the variables when needed (upgrade path)
+
+* Follow coding and naming standards (Magento, Bootstrap) to get a consistent result
+  * No tabs, just spaces
+  * UTF-8
+
+* Include the file header in every file you create
+
+* Write meaningful commit messages and keep commits small (commit = 1 feature change, not a bunch of changes over a time period)
+  * E.g. "changed magento flash messages to match bootstrap markup", "catalog grid uses bootstrap grid system"
