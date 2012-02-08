@@ -64,6 +64,12 @@
                 <min>1.6.0</min>
                 <max>1.9.0</max>
             </package>
+            <package>
+                <name>Holzweg_Less</name>
+                <channel>community</channel>
+                <min>0.0.1</min>
+                <max>1.0.0</max>
+            </package>
         </required>
     </dependencies>
 </package>

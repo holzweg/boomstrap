@@ -18,7 +18,7 @@ Default layout, loads most of the pages
         <label>All Pages</label>
         <block type="page/html" name="root" output="toHtml" template="page/3columns.phtml">
 
-            <block type="boomstrap/html_head" name="head" as="head">
+            <block type="hwless/html_head" name="head" as="head">
                 <action method="addJs"><script>prototype/prototype.js</script></action>
                 <action method="addJs"><script>lib/ccard.js</script></action>
                 <action method="addJs"><script>prototype/validation.js</script></action>
@@ -34,7 +34,7 @@ Default layout, loads most of the pages
                 <action method="addJs"><script>mage/cookies.js</script></action>
 
                 <!-- LESS Parser -->
-                <action method="addItem"><type>skin_js</type><name>js/lib/less-1.2.1.min.js</name><params/></action>
+                <action method="addJs"><script>lib/less.js</script></action>
 
                 <!-- Bootstrap JS -->
                 <action method="addItem"><type>skin_js</type><name>js/bootstrap/bootstrap-transition.js</name><params/></action>
