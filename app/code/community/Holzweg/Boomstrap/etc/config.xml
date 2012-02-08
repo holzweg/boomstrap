@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Boomstrap
+ *
+ * @category    design
+ * @package     boomstrap
+ * @copyright   Copyright (c) 2012 Holzweg e-commerce solutions (http://www.holzweg.com)
+ * @license     http://www.apache.org/licenses/LICENSE-2.0  Apache License v2.0
+ */
+-->
+<config>
+    <modules>
+        <Holzweg_Boomstrap>
+            <version>0.0.1</version>
+        </Holzweg_Boomstrap>
+    </modules>
+    <global>
+        <blocks>
+            <boomstrap>
+                <class>Holzweg_Boomstrap_Block</class>
+            </boomstrap>
+        </blocks>
+    </global>
+</config>
