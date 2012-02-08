@@ -9,7 +9,7 @@ Some quickstart guides for development:
   * No tabs, just spaces
   * UTF-8
 
-* Include the file header in every file you create
+* Include the comment block header (copyright holzweg etc.) in every file you create
 
 * Write meaningful commit messages and keep commits small (commit = 1 feature change, not a bunch of changes over a time period)
   * E.g. "changed magento flash messages to match bootstrap markup", "catalog grid uses bootstrap grid system"
