@@ -36,16 +36,12 @@
     <contents>
         <target name="magedesign">
             <dir name="frontend">
-                <dir name="hwboomstrap">
-                    <file name="testdesign" hash="d41d8cd98f00b204e9800998ecf8427e"/>
-                </dir>
+                <dir name="boomstrap" />
             </dir>
         </target>
         <target name="mageskin">
             <dir name="frontend">
-                <dir name="hwboomstrap">
-                    <file name="testskin" hash="d41d8cd98f00b204e9800998ecf8427e"/>
-                </dir>
+                <dir name="boomstrap" />
             </dir>
         </target>
     </contents>
