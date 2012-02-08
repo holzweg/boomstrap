@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+<package>
+    <name>Holzweg_Boomstrap</name>
+    <version>0.0.1</version>
+    <stability>devel</stability>
+    <license uri="http://www.apache.org/licenses/LICENSE-2.0">Apache License v2.0</license>
+    <channel>community</channel>
+    <extends/>
+    <summary>Holzweg Bootstrap Design Extension</summary>
+    <description>An extension enabling Twitter Bootstrap in Magento.</description>
+    <notes>Work in progress</notes>
+    <authors>
+        <author>
+            <name>Mathias Geat</name>
+            <user>mage</user>
+            <email>mathias.geat@holzweg.com</email>
+        </author>
+        <author>
+            <name>Florian Peter</name>
+            <user>flpe</user>
+            <email>florian.peter@holzweg.com</email>
+        </author>
+        <author>
+            <name>Christian Lettenbichler</name>
+            <user>chle</user>
+            <email>christian.lettenbichler@holzweg.com</email>
+        </author>
+        <author>
+            <name>Tobias Strebitzer</name>
+            <user>tost</user>
+            <email>tobias.strebitzer@holzweg.com</email>
+        </author>
+    </authors>
+    <date>2012-02-08</date>
+    <time>14:16:33</time>
+    <contents>
+        <target name="magedesign">
+            <dir name="frontend">
+                <dir name="hwboomstrap">
+                    <file name="testdesign" hash="d41d8cd98f00b204e9800998ecf8427e"/>
+                </dir>
+            </dir>
+        </target>
+        <target name="mageskin">
+            <dir name="frontend">
+                <dir name="hwboomstrap">
+                    <file name="testskin" hash="d41d8cd98f00b204e9800998ecf8427e"/>
+                </dir>
+            </dir>
+        </target>
+    </contents>
+    <compatible/>
+    <dependencies>
+        <required>
+            <php>
+                <min>5.2.6</min>
+                <max>6.0.0</max>
+            </php>
+            <package>
+                <name>Interface_Frontend_Base_Default</name>
+                <channel>community</channel>
+                <min>1.6.0</min>
+                <max>1.9.0</max>
+            </package>
+            <package>
+                <name>Interface_Frontend_Default</name>
+                <channel>community</channel>
+                <min>1.6.0</min>
+                <max>1.9.0</max>
+            </package>
+        </required>
+    </dependencies>
+</package>
