@@ -1,0 +1,15 @@
+<?php $_menu = $this->renderCategoriesMenuHtml(0,'level-top') ?>
+<?php if($_menu): ?>
+<div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <a class="brand" href="<?php echo $this->getUrl('') ?>"><?php echo Mage::app()->getStore()->getName(); ?></a>
+            <div class="nav-collapse">
+                <ul class="nav">
+                    <?php echo $_menu ?>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<?php endif ?>

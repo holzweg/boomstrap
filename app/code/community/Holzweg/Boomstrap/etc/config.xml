@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Holzweg_Boomstrap>
+            <version>0.0.1</version>
+        </Holzweg_Boomstrap>
+    </modules>
+    <global>
+        <blocks>
+            <hwboomstrap_catalog>
+                <class>Holzweg_Boomstrap_Catalog_Block</class>
+            </hwboomstrap_catalog>
+        </blocks>
+    </global>
+</config>
