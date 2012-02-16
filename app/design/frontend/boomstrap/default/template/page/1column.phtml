@@ -34,12 +34,13 @@
 <head>
 <?php echo $this->getChildHtml('head') ?>
 </head>
-<body<?php echo $this->getBodyClass()?' class="'.$this->getBodyClass().'"':'' ?>>
+<!-- <body<?php echo $this->getBodyClass()?' class="'.$this->getBodyClass().'"':'' ?>> -->
+<body>
 <?php echo $this->getChildHtml('after_body_start') ?>
 <?php echo $this->getChildHtml('global_notices') ?>
+<?php echo $this->getChildHtml('header') ?>
+<?php echo $this->getChildHtml('breadcrumbs') ?>
 <div id="page" class="container">
-    <?php echo $this->getChildHtml('header') ?>
-    <?php echo $this->getChildHtml('breadcrumbs') ?>
     <div class="row">
         <div class="span12">
             <?php echo $this->getChildHtml('global_messages') ?>

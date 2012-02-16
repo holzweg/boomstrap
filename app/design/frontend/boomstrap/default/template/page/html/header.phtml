@@ -8,12 +8,33 @@
  * @license     http://www.apache.org/licenses/LICENSE-2.0  Apache License v2.0
  */
 ?>
+<?php echo $this->getChildHtml('topMenu') ?>
+
+<!-- Le default bootstrap header
+================================================== -->
+<header>
+  <div class="inner">
+	<div class="container" style="padding-top: 40px">
+	  <h1>Bootstrap, from Twitter, running on HWBoot Showreel Site</h1>
+	  <p class="lead">
+
+		Bootstrap is a toolkit from Twitter designed to kickstart development of webapps and sites.<br />
+		It includes base CSS and HTML for typography, forms, buttons, tables, grids, navigation, and more.<br />
+	  </p>
+	  <p><strong>Nerd alert:</strong> Bootstrap is <a href="#less" title="Read about using Bootstrap with Less">built with Less</a> and was designed to work out of the gate with modern browsers in mind.</p>
+	</div><!-- /container -->
+
+  </div>
+</header>
+
+<!-- @todo remove? -->
+<?php if(0): ?>
 <div class="navbar navbar-fixed-top">
     <div class="navbar-inner">
         <?php if ($this->getIsHomePage()):?>
         <a href="<?php echo $this->getUrl('') ?>" title="<?php echo $this->getLogoAlt() ?>" class="logo brand"><strong><img src="<?php echo $this->getLogoSrc() ?>" alt="<?php echo $this->getLogoAlt() ?>" /></strong></a>
         <?php else:?>
-        <a href="<?php echo $this->getUrl('') ?>" title="<?php echo $this->getLogoAlt() ?>" class="logo brand"><strong><?php //echo $this->getLogoAlt() ?><img src="<?php echo $this->getLogoSrc() ?>" alt="<?php echo $this->getLogoAlt() ?>" /></strong></a>
+        <a href="<?php echo $this->getUrl('') ?>" title="<?php echo $this->getLogoAlt() ?>" class="logo brand"><strong><?php echo $this->getLogoAlt() ?><img src="<?php echo $this->getLogoSrc() ?>" alt="<?php echo $this->getLogoAlt() ?>" /></strong></a>
         <?php endif?>
         <div class="container">
             <div class="form-search pull-right"><?php echo $this->getChildHtml('topSearch') ?></div>
@@ -24,4 +45,4 @@
         <?php echo $this->getChildHtml('topContainer'); ?>
     </div>
 </div>
-<?php echo $this->getChildHtml('topMenu') ?>
+<?php endif?>

@@ -9,7 +9,49 @@
 
 // STRUCTURAL LAYOUT
 // -----------------
-
 body {
-  padding: 60px 0 0 0;
+  padding: 40px 0 0 0;
+}
+
+// HEADER
+// -----------------
+header:first-of-type {
+
+    background-color: #049cd9;
+    background-image: -moz-linear-gradient(#004d9f, #049cd9);
+    background-repeat: no-repeat;
+
+    .inner {
+		background: url(../images/grid-18px.png) repeat scroll center top transparent;
+		box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3) inset;
+		padding: 45px 0;
+	}
+
+	h1,  p {
+		color: @white;
+		margin-bottom: 9px;
+		text-align: center;
+		text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+	}
+
+	h1 {
+		font-size: 54px;
+		line-height: 1;
+		text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+	}
+
+	p {
+		font-weight: 300;
+	}
+
+	.lead {
+		font-size: 20px;
+		line-height: 27px;
+	}
+
+	p a {
+		color: @white;
+		font-weight: bold;
+	}
+
 }
