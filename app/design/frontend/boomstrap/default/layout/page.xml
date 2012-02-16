@@ -38,6 +38,7 @@ Default layout, loads most of the pages
                 <action method="addItem"><type>skin_js</type><name>js/jquery-1.7.1.js</name><params/></action>
 
                 <!-- LESS Parser -->
+                <action method="addItem"><type>skin_js</type><name>js/less_hack.js</name><params/></action>
                 <action method="addJs"><script>lib/less.js</script></action>
 
                 <!-- Bootstrap JS -->
