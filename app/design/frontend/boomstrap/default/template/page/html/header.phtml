@@ -8,25 +8,39 @@
  * @license     http://www.apache.org/licenses/LICENSE-2.0  Apache License v2.0
  */
 ?>
-<?php echo $this->getChildHtml('topMenu') ?>
+
+<!-- Meta nav
+================================================== -->
+<nav class="navbar navbar-fixed-top" id="meta-nav">
+    <div class="navbar-inner">
+        <div class="container">
+            <div class="nav-collapse">
+                <?php echo $this->getChildHtml('topLinks') ?>
+                <?php echo $this->getChildHtml('store_language') ?>
+                <?php echo $this->getChildHtml('topSearch') ?>
+            </div>
+        </div>
+    </div>
+</nav>
 
 <!-- Le default bootstrap header
 ================================================== -->
 <header>
   <div class="inner">
 	<div class="container" style="padding-top: 40px">
-	  <h1>Bootstrap, from Twitter, running on <?php echo Mage::app()->getStore()->getName(); ?></h1>
+    <h1><?php echo $this->getWelcome() ?> now running on Bootstrap, from Twitter.</h1>
 	  <p class="lead">
 
 		Bootstrap is a toolkit from Twitter designed to kickstart development of webapps and sites.<br />
 		It includes base CSS and HTML for typography, forms, buttons, tables, grids, navigation, and more.<br />
 	  </p>
-	  <p><strong>Nerd alert:</strong> Bootstrap is <a href="#less" title="Read about using Bootstrap with Less">built with Less</a> and was designed to work out of the gate with modern browsers in mind.</p>
+	  <p><strong>Nerd alert:</strong> Bootstrap is <a href="http://www.lesscss.org" title="Read about using Bootstrap with Less" target="_blank">built with Less</a> and was designed to work out of the gate with modern browsers in mind.</p>
 	</div><!-- /container -->
 
   </div>
 </header>
 
+<?php echo $this->getChildHtml('topMenu') ?>
 <!-- @todo remove? -->
 <?php if(0): ?>
 <div class="navbar navbar-fixed-top">

@@ -9,16 +9,13 @@
 
 // STRUCTURAL LAYOUT
 // -----------------
-body {
-  padding: 40px 0 0 0;
-}
 
 // HEADER
 // -----------------
 header:first-of-type {
 
-    background-color: #049cd9;
-    background-image: -moz-linear-gradient(#004d9f, #049cd9);
+    background-color: @headerColor2;
+    background-image: -moz-linear-gradient(@headerColor1, @headerColor2);
     background-repeat: no-repeat;
 
     .inner {
@@ -54,4 +51,22 @@ header:first-of-type {
 		font-weight: bold;
 	}
 
+}
+
+// PRIMARY NAV
+// -----------------
+nav#primary-nav {
+   background-color: @black;
+}
+
+// META NAV
+// -----------------
+nav#meta-nav {
+    .navbar-inner {
+        #gradient > .vertical(@metaNavbarBackgroundHighlight, @navbarBackground);
+        
+        label{
+            display: inline-block;   
+        }
+    }
 }

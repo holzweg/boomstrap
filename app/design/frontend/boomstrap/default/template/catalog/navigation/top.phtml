@@ -1,15 +1,16 @@
 <?php $_menu = $this->renderCategoriesMenuHtml(0,'level-top') ?>
 <?php if($_menu): ?>
-<div class="navbar navbar-fixed-top">
+<nav class="navbar" id="primary-nav">
     <div class="navbar-inner">
         <div class="container">
             <a class="brand" href="<?php echo $this->getUrl('') ?>"><?php echo Mage::app()->getStore()->getName(); ?></a>
-            <div class="nav-collapse">
+            <nav class="nav-collapse">
                 <ul class="nav">
                     <?php echo $_menu ?>
                 </ul>
-            </div>
+                <?php echo $this->getChildHtml('topSearch') ?>
+            </nav>
         </div>
     </div>
-</div>
+</nav>
 <?php endif ?>
