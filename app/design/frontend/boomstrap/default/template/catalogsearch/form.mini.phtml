@@ -12,7 +12,7 @@
 <!-- @todo Fix and activate Varien autocomplete or, better, implement via bootstrap's autocomplete plugin (:  -->
 
 <form id="search_mini_form" class="navbar-search" action="<?php echo $this->helper('catalogsearch')->getResultUrl() ?>" method="get">
-    <input id="search" type="text" name="<?php echo $this->helper('catalogsearch')->getQueryParamName() ?>" value="<?php echo $this->helper('catalogsearch')->getEscapedQueryText() ?>" class="search-query" />
+    <input id="search" type="text" name="<?php echo $this->helper('catalogsearch')->getQueryParamName() ?>" value="<?php echo $this->helper('catalogsearch')->getEscapedQueryText() ?>" class="search-query" placeholder="Search entire store here..." />
     <!-- <button type="submit" title="<?php echo $this->__('Search') ?>" class="button"><span><span><?php echo $this->__('Search') ?></span></span></button> -->
     <!-- <div id="search_autocomplete" class="search-autocomplete"></div>
     <script type="text/javascript">
