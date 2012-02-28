@@ -65,37 +65,18 @@ class Holzweg_Boomstrap_Catalog_Block_Navigation extends Mage_Catalog_Block_Navi
             $classes[] = $outermostItemClass;
             $linkClasses[] = $outermostItemClass;
         }
-        if ($isFirst) {
-            $classes[] = 'first';
-        }
-        if ($isLast) {
-            $classes[] = 'last';
-        }
+
         if ($hasActiveChildren) {
             $classes[] = 'parent';
             $classes[] = 'dropdown';
             $linkClasses[] = "dropdown-toggle";
+            $aTagParam = 'data-toggle="dropdown"';
         }
-
-        /*
-         *
-<a href="#" class="dropdown-toggle" data-toggle="dropdown">
-    Account<b class="caret"></b>
-</a>
-<ul class="dropdown-menu">
-...
-</ul>
-         *
-         */
 
         // prepare list item attributes
         $attributes = array();
         if (count($classes) > 0) {
             $attributes['class'] = implode(' ', $classes);
-        }
-        if ($hasActiveChildren && !$noEventAttributes) {
-             $attributes['onmouseover'] = 'toggleMenu(this,1)';
-             $attributes['onmouseout'] = 'toggleMenu(this,0)';
         }
 
         // assemble list item with attributes
@@ -106,7 +87,7 @@ class Holzweg_Boomstrap_Catalog_Block_Navigation extends Mage_Catalog_Block_Navi
         $htmlLi .= '>';
         $html[] = $htmlLi;
 
-        $html[] = '<a href="'.$this->getCategoryUrl($category).'" class="' . implode(" ", $linkClasses) . '">';
+        $html[] = '<a href="'.$this->getCategoryUrl($category).'" class="' . implode(" ", $linkClasses) . '" ' . $aTagParam . '>';
         $html[] = $this->escapeHtml($category->getName());
 
         if($hasActiveChildren) {
