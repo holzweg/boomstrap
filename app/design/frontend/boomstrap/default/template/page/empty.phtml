@@ -24,10 +24,10 @@
     <?php echo $this->getChildHtml('after_body_start') ?>
     <?php echo $this->getChildHtml('global_notices') ?>
     <?php echo $this->getChildHtml('header') ?>
-    <?php echo $this->getChildHtml('breadcrumbs') ?>
     <div id="page" class="container">
         <div class="row">
             <div class="span12">
+                <?php echo $this->getChildHtml('breadcrumbs') ?>
                 <?php echo $this->getChildHtml('global_messages') ?>
                 <?php echo $this->getChildHtml('content') ?>
             </div>
