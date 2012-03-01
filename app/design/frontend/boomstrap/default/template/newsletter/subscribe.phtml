@@ -1,0 +1,26 @@
+<?php
+/**
+ * Boomstrap
+ *
+ * @category    design
+ * @package     boomstrap
+ * @copyright   Copyright (c) 2012 Holzweg e-commerce solutions (http://www.holzweg.com)
+ * @license     http://www.apache.org/licenses/LICENSE-2.0  Apache License v2.0
+ */
+?>
+<form class="well" action="<?php echo $this->getFormActionUrl() ?>" method="post" id="newsletter-validate-detail">
+    <fieldset>
+        <legend>
+            <?php echo $this->__('Newsletter') ?></legend>
+        <label for="newsletter"><?php echo $this->__('Sign Up for Our Newsletter:') ?></label>
+        <input type="email" name="email" id="newsletter" title="<?php echo $this->__('Sign up for our newsletter') ?>" />
+        <button type="submit" title="<?php echo $this->__('Subscribe') ?>" class="btn btn-small btn-success"><i class="icon-envelope icon-white"></i> <?php echo $this->__('Subscribe') ?></button>
+    </fieldset>
+</form>
+
+<!--@varien-->
+<!--<script type="text/javascript">
+    //<![CDATA[
+    var newsletterSubscriberFormDetail = new VarienForm('newsletter-validate-detail');
+    //]]>
+</script>-->
