@@ -9,7 +9,7 @@
  */
 ?>
 
-<div class="well">
+<aside class="well">
     <?php if (strtolower(substr($this->getLinkUrl(), 0, 4)) === 'http'): ?>
         <a href="<?php echo $this->getLinkUrl() ?>" title="<?php echo $this->__($this->getImgAlt()) ?>">
     <?php elseif ($this->getLinkUrl()): ?>
@@ -19,4 +19,4 @@
     <?php if ($this->getLinkUrl()): ?>
         </a>
     <?php endif ?>
-</div>
+</aside>
