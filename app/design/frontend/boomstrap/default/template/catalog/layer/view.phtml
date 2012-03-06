@@ -1,0 +1,36 @@
+<?php
+/**
+ * Boomstrap
+ *
+ * @category    design
+ * @package     boomstrap
+ * @copyright   Copyright (c) 2012 Holzweg e-commerce solutions (http://www.holzweg.com)
+ * @license     http://www.apache.org/licenses/LICENSE-2.0  Apache License v2.0
+ */
+?>
+
+<?php
+/**
+ * Category layered navigation
+ *
+ * @see Mage_Catalog_Block_Layer_View
+ */
+?>
+<?php if ($this->canShowBlock()): ?>
+    <div class="well">
+        <strong><i class="icon-shopping-cart"></i><?php echo $this->__('Shop By') ?></strong>
+        <?php echo $this->getStateHtml() ?>
+        <?php if ($this->canShowOptions()): ?>
+            <p><?php echo $this->__('Shopping Options') ?></p>
+            <?php $_filters = $this->getFilters() ?>
+            <?php foreach ($_filters as $_filter): ?>
+                <?php if ($_filter->getItemsCount()): ?>
+                    <span class="label label-info"><?php echo $this->__($_filter->getName()) ?></span>
+                    <?php echo $_filter->getHtml() ?>
+                <?php endif; ?>
+            <?php endforeach; ?>
+            <!-- @varien -->
+            <!-- <script type="text/javascript">decorateDataList('narrow-by-list')</script> -->
+        <?php endif; ?>
+    </div>
+<?php endif; ?>

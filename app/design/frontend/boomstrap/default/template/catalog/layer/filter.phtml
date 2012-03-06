@@ -1,0 +1,30 @@
+<?php
+/**
+ * Boomstrap
+ *
+ * @category    design
+ * @package     boomstrap
+ * @copyright   Copyright (c) 2012 Holzweg e-commerce solutions (http://www.holzweg.com)
+ * @license     http://www.apache.org/licenses/LICENSE-2.0  Apache License v2.0
+ */
+?>
+
+<?php
+/**
+ * Template for filter items block
+ *
+ * @see Mage_Catalog_Block_Layer_Filter
+ */
+?>
+
+<ol>
+<?php foreach ($this->getItems() as $_item): ?>
+    <li>
+        <?php if ($_item->getCount() > 0): ?>
+        <a href="<?php echo $this->urlEscape($_item->getUrl()) ?>"><?php echo $_item->getLabel() ?></a>
+        <?php else: echo $_item->getLabel() ?>
+        <?php endif; ?>
+        <span class="label label-success"><?php echo $_item->getCount() ?></span>
+    </li>
+<?php endforeach ?>
+</ol>
