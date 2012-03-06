@@ -1,0 +1,19 @@
+<?php $_menu = $this->renderCategoriesMenuHtml(0, 'level-top', true) ?>
+<?php if ($_menu): ?>
+    <nav class="navbar" id="primary-nav">
+        <div class="navbar-inner">
+            <div class="container">"
+                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </a>
+                <a class="brand" href="<?php echo $this->getUrl('') ?>"><?php echo Mage::app()->getStore()->getName(); ?></a>
+                    <ul class="nav">
+                        <?php echo $_menu ?>
+                    </ul>
+            </div>
+        </div>
+    </nav>
+    <?php
+ endif ?>

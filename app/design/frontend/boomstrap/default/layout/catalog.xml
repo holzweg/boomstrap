@@ -3,9 +3,10 @@
     <default>
         <!-- Mage_Catalog -->
         <reference name="top.menu">
-            <block type="hwboomstrap_catalog/navigation" name="catalog.topnav" template="catalog/navigation/top.phtml"/>
+            <block type="hwboomstrap_catalog/navigation" name="catalog.primary_nav" template="catalog/navigation/primary.phtml"/>
         </reference>
         <reference name="left">
+            <block type="hwboomstrap_catalog/navigation" name="catalog.secondary_nav" template="catalog/navigation/secondary.phtml" before="currency" />
             <block type="core/template" name="left.permanent.callout" template="callouts/left_col.phtml">
                 <action method="setImgSrc"><src>images/media/col_left_callout.jpg</src></action>
                 <action method="setImgAlt" translate="alt" module="catalog"><alt>Our customer service is available 24/7. Call us at (555) 555-0123.</alt></action>
