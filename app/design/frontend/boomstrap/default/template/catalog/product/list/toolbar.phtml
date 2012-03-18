@@ -1,0 +1,76 @@
+<?php
+/**
+ * Boomstrap
+ *
+ * @category    design
+ * @package     boomstrap
+ * @copyright   Copyright (c) 2012 Holzweg e-commerce solutions (http://www.holzweg.com)
+ * @license     http://www.apache.org/licenses/LICENSE-2.0  Apache License v2.0
+ */
+?>
+<?php
+/**
+ * Product list toolbar
+ *
+ * @see Mage_Catalog_Block_Product_List_Toolbar
+ */
+?>
+<?php if($this->getCollection()->getSize()): ?>
+<div class="well">
+    <div class="pager">
+        <?php if($this->getLastPageNum()>1): ?>
+            <?php echo $this->__('Items %s to %s of %s total', $this->getFirstNum(), $this->getLastNum(), $this->getTotalNum()) ?>
+        <?php else: ?>
+            <strong><?php echo $this->__('%s Item(s)', $this->getTotalNum()) ?></strong>
+        <?php endif; ?>
+
+        <span class="pull-right form-inline">
+            <label><?php echo $this->__('Show') ?></label>
+            <select class="span1" onchange="setLocation(this.value)">
+            <?php foreach ($this->getAvailableLimit() as  $_key=>$_limit): ?>
+                <option value="<?php echo $this->getLimitUrl($_key) ?>"<?php if($this->isLimitCurrent($_key)): ?> selected="selected"<?php endif ?>>
+                    <?php echo $_limit ?>
+                </option>
+            <?php endforeach; ?>
+            </select>
+            <label class="help-inline"><?php echo $this->__('per page') ?></label>
+        </span>
+        <?php echo $this->getPagerHtml() ?>
+
+    </div>
+
+    <?php if( $this->isExpanded() ): ?>
+    <div class="sorter">
+        <?php if( $this->isEnabledViewSwitcher() ): ?>
+            <?php $_modes = $this->getModes(); ?>
+            <?php if($_modes && count($_modes)>1): ?>
+            <?php foreach ($this->getModes() as $_code=>$_label): ?>
+                <?php $_icon_class = ($_code == 'list') ? "icon-list" : "icon-th-large" ?>
+                <?php if($this->isModeActive($_code)): ?>
+                    <strong class="btn btn-inverse disabled" title="<?php echo $_label ?>" class="<?php echo strtolower($_code); ?>"><i class="<?php echo $_icon_class ?>"></i> <?php echo $_label ?></strong>&nbsp;
+                <?php else: ?>
+                    <a class="btn btn-inverse" href="<?php echo $this->getModeUrl($_code) ?>" title="<?php echo $_label ?>" class="<?php echo strtolower($_code); ?>"><i class="<?php echo $_icon_class ?>"></i> <?php echo $_label ?></a>&nbsp;
+                <?php endif; ?>
+            <?php endforeach; ?>
+            <?php endif; ?>
+        <?php endif; ?>
+    
+        <span class="pull-right form-inline">
+            <label><?php echo $this->__('Sort By') ?></label>
+            <select class="span2" onchange="setLocation(this.value)">
+            <?php foreach($this->getAvailableOrders() as $_key=>$_order): ?>
+                <option value="<?php echo $this->getOrderUrl($_key, 'asc') ?>"<?php if($this->isOrderCurrent($_key)): ?> selected="selected"<?php endif; ?>>
+                    <?php echo $this->__($_order) ?>
+                </option>
+            <?php endforeach; ?>
+            </select>
+            <?php if($this->getCurrentDirection() == 'desc'): ?>
+                <a class="btn btn-small" href="<?php echo $this->getOrderUrl(null, 'asc') ?>" title="<?php echo $this->__('Set Ascending Direction') ?>"><i class="icon-arrow-down"></i></a>
+            <?php else: ?>
+                <a class="btn btn-small" href="<?php echo $this->getOrderUrl(null, 'desc') ?>" title="<?php echo $this->__('Set Descending Direction') ?>"><i class="icon-arrow-up"></i></a>
+            <?php endif; ?>
+        </span>
+    </div>
+    <?php endif; ?>
+</div>
+<?php endif ?>
