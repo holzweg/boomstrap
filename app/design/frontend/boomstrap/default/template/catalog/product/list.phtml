@@ -76,15 +76,17 @@
             <div class="row">
             <?php endif ?>
                 <article class="span<?php echo 6 / $_columnCount ?>">
-                    <a href="<?php echo $_product->getProductUrl() ?>" title="<?php echo $this->stripTags($this->getImageLabel($_product, 'small_image'), null, true) ?>" class="product-image"><img class="thumbnail" src="<?php echo $this->helper('catalog/image')->init($_product, 'small_image')->resize(135); ?>" width="135" height="135" alt="<?php echo $this->stripTags($this->getImageLabel($_product, 'small_image'), null, true) ?>" /></a>
-                    <h2><a href="<?php echo $_product->getProductUrl() ?>" title="<?php echo $this->stripTags($_product->getName(), null, true) ?>"><?php echo $_helper->productAttribute($_product, $_product->getName(), 'name') ?></a></h2>
+                    <a href="<?php echo $_product->getProductUrl() ?>" title="<?php echo $this->stripTags($this->getImageLabel($_product, 'small_image'), null, true) ?>" class="product-image"><img class="thumbnail well" src="<?php echo $this->helper('catalog/image')->init($_product, 'small_image')->resize(135); ?>" width="135" height="135" alt="<?php echo $this->stripTags($this->getImageLabel($_product, 'small_image'), null, true) ?>" /></a>
+                    <h2><a href="<?php echo $_product->getProductUrl() ?>" title="<?php echo $this->stripTags($_product->getName(), null, true) ?>"><?php /* Up to a certain width of text only @todo responsiveness @warning breaks in php < 5.3 */ $name = $_helper->productAttribute($_product, $_product->getName(), 'name'); echo strstr( wordwrap( $name, 10, '%STOP%', true ), '%STOP%', true ) ?: $name ?></a></h2>
                     <?php if($_product->getRatingSummary()): ?>
                     <?php echo $this->getReviewsSummaryHtml($_product, 'short') ?>
                     <?php endif; ?>
-                    <?php echo $this->getPriceHtml($_product, true) ?>
+                    <div class="well">
+                        <?php echo $this->getPriceHtml($_product, true) ?>
+                    </div>
                     <div class="btn-group well">
                         <?php if($_product->isSaleable()): ?>
-                            <button type="button" title="<?php echo $this->__('Add to Cart') ?>" class="btn btn-success" onclick="setLocation('<?php echo $this->getAddToCartUrl($_product) ?>')"><i class="icon-shopping-cart icon-white"></i> <?php echo $this->__('Add to Cart') ?></button>
+                            <button type="button" title="<?php echo $this->__('Add to Cart') ?>" class="btn btn-small btn-success" onclick="setLocation('<?php echo $this->getAddToCartUrl($_product) ?>')"><i class="icon-shopping-cart icon-white"></i> <?php echo $this->__('Add to Cart') ?></button>
                         <?php else: ?>
                             <p><span class="label-warning"><?php echo $this->__('Out of stock') ?></span></p>
                         <?php endif; ?>
