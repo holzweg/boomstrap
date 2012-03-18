@@ -1,5 +1,5 @@
 /* ==========================================================
- * bootstrap-alert.js v2.0.2
+ * bootstrap-alert.js v2.0.0
  * http://twitter.github.com/bootstrap/javascript.html#alerts
  * ==========================================================
  * Copyright 2012 Twitter, Inc.
@@ -51,14 +51,11 @@
 
       $parent.length || ($parent = $this.hasClass('alert') ? $this : $this.parent())
 
-      $parent
-        .trigger('close')
-        .removeClass('in')
+      $parent.removeClass('in')
 
       function removeElement() {
-        $parent
-          .trigger('closed')
-          .remove()
+        $parent.remove()
+        $parent.trigger('closed')
       }
 
       $.support.transition && $parent.hasClass('fade') ?
@@ -91,4 +88,4 @@
     $('body').on('click.alert.data-api', dismiss, Alert.prototype.close)
   })
 
-}( window.jQuery );
+}( window.jQuery )
