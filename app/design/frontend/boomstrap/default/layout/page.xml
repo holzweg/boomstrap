@@ -58,6 +58,10 @@ Default layout, loads most of the pages
                 <block type="page/js_cookie" name="js_cookies" template="page/js/cookie.phtml"/>
 
                 <action method="addLess"><stylesheet>less/screen.less</stylesheet></action>
+
+                <!-- Custom Boomstrap JS -->
+                <action method="addItem"><type>skin_js</type><name>js/boomstrap.js</name><params/></action>
+                                
                 
                 <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
                 <action method="addItem"><type>js</type><name>js/html5shim/html5.js</name><params/><if>lt IE 9</if></action>

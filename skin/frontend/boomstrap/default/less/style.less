@@ -111,9 +111,15 @@ nav#meta-nav {
 
 // MAIN CONTENT - PRODUCT LISTING
 // -----------------
-article .btn-group .btn {
-    width: 96px;
-    margin-bottom: 5px;
+article .btn-group {
+    .btn {
+        width: 96px;
+        margin-bottom: 5px;
+    }
+    /* @fixme Product Listing 'Add to cart' button - notice the right border missing and the need for this hack - what's going on here? */
+    button.btn {
+        //width: 116px;
+    }
 }
 
 // FOOTER
@@ -150,6 +156,3 @@ footer {
     }
 
 }
-
-// MAIN CONTENT
-// -----------------
