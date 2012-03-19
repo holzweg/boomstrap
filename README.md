@@ -20,11 +20,9 @@ BooMstrap is a separate Magento theme, aimed at following all Magento standards.
 1. Install MageLess
 
         cd modules
-        git clone git@github.com:holzweg/mageless.git
-
+        git clone git@github.com:holzweg/mageless.git 
 This will add [LESS] (http://www.lesscss.org) support to your magento installation.
-BooMstrap depends on this extension to render the bootstrap css through [LESS] (http://www.lesscss.org).
-
+BooMstrap depends on this extension to render the bootstrap css through [LESS] (http://www.lesscss.org).  
 @todo We're creating a "massetic" module instead...
 
 2. Clone this repository into your modules directory
@@ -32,10 +30,10 @@ BooMstrap depends on this extension to render the bootstrap css through [LESS] (
         cd modules
         git clone git@github.com:holzweg/boomstrap.git
 
-3. Switch your store's (development) design to Boomstrap
+3. Switch your store's (development) design to Boomstrap  
 @todo Add further instructions
 
-4. Optional: create symlinks for leaner access to the files
+4. Optional: create symlinks for leaner access to the files  
 @todo
 
 5. Kick back, clear the cache and enjoy! (:
